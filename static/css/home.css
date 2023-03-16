@@ -1,0 +1,235 @@
+body{
+    background: #f8f5f2;
+}
+.buddy {
+    color: #ff7782;
+}
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+  
+h2 {
+    font-size: 1.4rem;
+}
+  
+h3 {
+    font-size: 0.87rem;
+}
+  
+h4 {
+    font-size: 0.8rem;
+}
+  
+h5 {
+    font-size: 0.77rem;
+}
+img {
+    display: block;
+    width: 100%;
+}  
+p{
+    color:#272343
+}
+/** Top nav**/
+.section{
+    padding:0 0 60px 0;
+}
+.top-nav{
+    position: fixed !important;
+    width: 100%;
+    background: rgba(188, 224, 255);
+    z-index: 2;
+    box-shadow: 1px 7px 14px -6px #00000059;
+}
+.top-nav img{
+    max-width: 30px;
+    display: inline;
+    
+}
+
+.top-nav .signupBTN{
+    background-color: #ff7782;
+    margin: 0 3px;
+    color: #f8f5f2;
+    border-radius: 4px;
+    
+}
+
+.topmain{
+    position: relative;
+    bottom: -57px;
+    z-index: 1;
+}
+.bg1{
+    background: url(../media/carosel1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.topgrid{
+    padding: 8rem 2rem;
+    display: grid;
+    grid-template-columns:  47.5% 47.5%;
+    grid-gap: 5%;
+    max-width: 900px;
+    margin: auto;
+}
+.topgrid:first-child{
+    margin:auto;
+}
+.topgrid p{
+    font-size: 18px;
+}
+.signupBTN a{
+    background-color: #ff7782;
+    padding: 0rem 3rem 0.5rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px ;
+}
+.signupBTN a:hover{
+    background-color: #af5159;
+}
+.topgrid img{
+    max-width: 80% ;
+
+}
+.topgrid .text{
+    background-color: rgba(253, 253, 249, 0.6);
+    padding: 3rem;
+    border-radius: 15px;
+}
+#about{
+    padding: 5rem
+}
+
+#features .bg{
+    background: rgba(188, 224, 255, 0.38);
+    padding: 5rem;
+}
+#features .topgrid{
+    padding:1rem;
+    grid-template-columns: 49% 49%;
+    grid-gap: 2%;
+}
+#features .topgrid div{
+    background-color: #a7c9da;
+    padding: 3em;
+    border-radius: 3px;
+    color: white;
+}
+#features h3, .topgrid h3{
+    text-align: center;
+}
+@media screen and (max-width:767px){
+    .top-nav .signupBTN{
+        background-color: rgba(255, 119, 130,0.8);
+        margin: 3px 0px;
+        color: rgb(248, 245, 242);
+        border-radius: 4px;
+    }
+    .topgrid .text{
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .topgrid{
+        padding: 5rem 2rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto ;
+        grid-row-gap: 30px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .topgrid img{
+        max-width: 270px ;
+        margin: 0 auto;
+    }
+    .topgrid:first-child{
+        min-width: 400px;
+    }
+    #features .topgrid{
+        max-width: 330px;
+    }
+}
+@media screen and (max-width:1000px){
+    #features .topgrid{
+        width: 100%;
+        max-width: 640px;
+        padding:1rem  0rem 2rem 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto ;
+    }
+}
+#carouselExample{
+    margin: 2.5rem auto;
+}
+#carouselExample h3{
+    padding: 1rem 0;
+}
+.carousel-caption {
+    background-color: rgba(53, 49, 49, 0.4);
+    color: #ffffff;
+}
+
+.carousel-caption a, .carousel-caption p{
+    color: #ffffff;
+    text-decoration: none;
+}
+.carousel-caption a:hover{
+    color:#ff7782;
+}
+
+#faq.bg{
+    background: rgba(188, 224, 255, 0.38);
+    padding: 5rem;
+}
+#faq1,#faq2{
+    margin:2rem 0;
+    padding:1rem 1rem;
+    background-color: #a7c9da;
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width:550px) {
+    h1 {
+        font-weight: 800;
+        font-size: 1.4rem;
+    }
+      
+    h2 {
+        font-size: 1.1rem;
+    }
+      
+    h3 {
+        font-size: 0.8rem;
+    }
+      
+    h4 {
+        font-size: 0.7rem;
+    }
+      
+    h5 {
+        font-size: 0.6rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    li{
+        font-size: 0.9rem;
+    }
+    #features .topgrid div{
+        padding: 1.5em;
+    }
+    .signupBTN a{
+        background-color: #ff7782;
+        padding: 0rem 1.5rem 0.2rem;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px ;
+    }
+}

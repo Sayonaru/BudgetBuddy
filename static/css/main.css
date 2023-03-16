@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@300&display=swap");
+
+:root {
+  --groceriesVaule: 12.5%;
+  --transportValue: 12.5%;
+  --entertainmentValue: 12.5%;
+  --eatingoutValue: 12.5%;
+  --shoppingValue: 12.5%;
+  --healthValue: 12.5%;
+  --billsValue: 12.5%;
+  --otherValue: 12.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto Slab";
+  font-size: 0.88rem;
+  background: #f8f5f2;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+a {
+  color: #272343;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 0.87rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.text_muted {
+  color: #7d8da1;
+}
+
+p {
+  color: #2d334a;
+}
+
+.primary {
+  color: #7380ec;
+}
+
+.danger {
+  color: #ff7782;
+}
+
+.success {
+  color: #41f1b6;
+}
+
+.warning {
+  color: #ffbb55;
+}
+
+.container {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+aside {
+  height: 100vh;
+  background: white;
+}
+
+.logo {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+aside .top {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+aside .logo {
+  display: flex;
+  gap: 0.8rem;
+  margin: 0.4rem;
+}
+
+aside .sidebar {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+}
+
+aside .sidebar a {
+  display: flex;
+  color: #7d8da1;
+  margin-left: 1.6rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
+}
+
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+aside h2 {
+  font-size: 1.2rem;
+}
+
+.buddy {
+  color: #ff7782;
+}
+
+aside .sidebar a.active {
+  background: lightblue;
+  color: #2d334a;
+  margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: #ff7782;
+}
+
+aside .sidebar a:hover {
+  color: #7380ec;
+}
+
+aside .sidebar a:hover span {
+  margin-left: 1rem;
+}
+
+aside .sidebar a span {
+  transition: all 300ms ease;
+}
+
+.main {
+  margin: 30px;
+  padding: 20px;
+  width: auto;
+  height: 100vh;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.groceries {
+  background-color: lightblue;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.eatingout {
+  background-color: darkblue;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.entertainment {
+  background-color: hotpink;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.transport {
+  background-color: orange;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.health {
+  background-color: green;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.shopping {
+  background-color: purple;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.bills {
+  background-color: brown;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.other {
+  background-color: lightgray;
+  align-items: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  margin-top: 1.1rem;
+}
+
+.categories h3 {
+  font-size: 1.35rem;
+  margin-left: 1.1rem;
+}
+
+.pie {
+  float: right;
+  display: flex;
+}
+
+.buttons {
+  width: 300px;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+}
+
+.pie h2 {
+  align-items: center;
+  display: flex;
+}

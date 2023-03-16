@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <meta charset="UFT-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/loginstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post">
+            {% if message is defined and message %}
+                <div class="alert alert-warning"> <strong> {{ message }} </strong></div>
+            {% endif %}
+            <div class="text_field">
+                <input type="text" class="form-control" id="email" name="email" required>
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="text_field">
+                <input type="password" class="form-control" id="password" name="password" name="pswd" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="password">Forgot Password?</div>
+            <button class="btn" type="submit" class="btn btn-primary">Login</button>
+            <div class="signup_link">
+                Not a member? <a href="{{url_for('register')}}">Signup</a>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</body>
+</html>
