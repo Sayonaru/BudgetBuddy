@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transactions</title>
+    <link rel="stylesheet" href="../static/css/business.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet" />
+    <script type="module" src="../static/acquisitions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<!--	-->
+	<div class="grid-container">
+      <aside>
+      	<div class="top">
+        	<div class="logo">
+          	<img src="../static/logo.PNG" alt="logo" />
+          		<h2>Budget</h2>
+          		<h2 class="buddy">Buddy</h2>
+        	</div>
+        	<div class="close" id="close-btn">
+          		<span class="material-icons"> close </span>
+        	</div>
+      	</div>
+      	<div class="sidebar">
+        	<a href="#" class="active">
+          		<span class="material-icons"> grid_view </span>
+          		<h3>Dashboard</h3>
+        	</a>
+        	<a href="#">
+          		<span class="material-icons"> insights </span>
+          		<h3>Past Spending</h3>
+        	</a>
+        	<a href="#">
+          		<span class="material-icons"> savings </span>
+          		<h3>Budgets</h3>
+        	</a>
+        	<a href="#">
+          		<span class="material-icons"> person </span>
+          		<h3>Profile</h3>
+        	</a>
+        	<a href="#">
+          		<span class="material-icons"> question_mark </span>
+          		<h3>About Us</h3>
+			</a>
+        	<a href="#">
+          		<span class="material-icons"> settings </span>
+          		<h3>Settings</h3>
+        	</a>
+        	<a href="{{ url_for('home') }}">
+          		<span class="material-icons"> logout </span>
+          		<h3>Logout</h3>
+			</a>
+		</div>
+	  </aside>
+		<main>
+			<h1>Dashboard</h1>
+          	<div class="main">
+            	<div class="buttons">
+              		<div class="categories">
+                		<button type="button" class="salary">
+                  			<span class="material-icons"> paid </span>
+                		</button>
+                		<h3>Salary</h3>
+              		</div>
+              		<div class="categories">
+                		<button type="button" class="utilities">
+                  			<span class="material-icons"> electric_bolt </span>
+                		</button>
+                		<h3>Utilities</h3>
+              		</div>
+              		<div class="categories">
+                		<button type="button" class="sales">
+                  			<span class="material-icons"> request_quote </span>
+                		</button>
+                		<h3>Sales</h3>
+              		</div>
+              		<div class="categories">
+                		<button type="button" class="office">
+                  			<span class="material-icons"> store </span>
+                		</button>
+                		<h3>Office</h3>
+					</div>
+              		<div class="categories">
+                		<button type="button" class="stock">
+                  			<span class="material-icons"> production_quantity_limits</span>
+		                </button>
+        		        <h3>Stock</h3>
+              		</div>
+              		<div class="categories">
+		                <button type="button" class="travel">
+							<span class="material-icons"> directions_car </span>
+                		</button>
+                		<h3>Travel</h3>
+	                </div>
+
+          		</div>
+				<div class="container-md">
+					<h1 class="buddy">Transactions</h1>
+					<table>
+						<thead>
+						<tr>
+							<th>Transaction ID</th>
+							<th>Date</th>
+							<th>Type</th>
+							<th>Amount</th>
+							<th>Category</th>
+							<th>Description</th>
+						</tr>
+						</thead>
+						<tbody>
+							{% for row in data %}
+							<tr class="{{ row['transaction_category'] }}">
+								<td>{{ row['transaction_id'] }}</td>
+								<td>{{ row['transaction_date'] }}</td>
+								<td class=" {{ row['transaction_type'] }}">{{ row['transaction_type'] }}</td>
+								<td>{{ row['transaction_amount'] }}</td>
+								<td>{{ row['transaction_category'] }}</td>
+								<td>{{ row['transaction_description'] }}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+
+					<form action="/add-transaction" method="POST">
+						<label for="type">Type:</label>
+						<select name="type" id="type">
+							<option value="income">Income</option>
+							<option value="expense">Expense</option>
+						</select>
+						<br><br>
+						<label for="amount">Amount:</label>
+						<input type="text" name="amount" id="amount">
+						<br><br>
+						<label for="category">Category:</label>
+						<select name="category" id="category">
+							<option value="salary">Salary</option>
+							<option value="utilities">Utilities</option>
+							<option value="sales">Sales</option>
+							<option value="office">Office</option>
+							<option value="stock">Stock</option>
+							<option value="travel">Travel</option>
+						</select>
+						<br><br>
+						<label for="description">Description:</label>
+						<input type="text" name="description" id="description">
+						<br><br>
+						<input type="submit" value="Add Transaction">
+					</form>
+				</div>
+			</div>
+
+        </main>
+      </div>
+
+	</div>
+
+</body>
+</html>

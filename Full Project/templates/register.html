@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/registerstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+      <div class="main">
+        <input type="checkbox" id="tickbox" aria-hidden="true">
+        <div class="signup">
+            <form action="{{ url_for('register') }}" method="post">
+                {% if message is defined and message %}
+                    <div class="alert alert-warning"> <strong> {{ message }} </strong></div>
+                {% endif %}
+                <label for="tickbox" aria-hidden="true">Sign up</label>
+                <input type="text" id="name" name="name" placeholder="Name" name="name" required="">
+                <input type="email" id="email" name="email" placeholder="Email" name="email" required="">
+                <input type="Password" id="password" name="password" placeholder="Password" name="pswd" required="">
+                <button>Sign up</button>
+                <div class="login_link">
+                    Already a member? <a href="{{url_for('login')}}">Login</a>
+                </div>
+            </form>
+        </div>
+      </div>
+</body>
+</html>
